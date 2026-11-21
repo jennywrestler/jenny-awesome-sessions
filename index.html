@@ -1,382 +1,480 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Jenny Awesome Sessions | Official Website</title>
 
-<meta name="description" content="Welcome to Jenny Awesome Sessions. Explore professional wrestling photography, profile information and private session inquiries.">
+<meta name="description" content="Official Jenny Awesome Sessions website. Photography, profile and private session inquiries.">
 
 <meta name="theme-color" content="#080808">
 
 <style>
 
 :root {
-    --black: #080808;
-    --dark: #111111;
-    --gold: #d4af37;
-    --light-gold: #f5df91;
-    --white: #ffffff;
-    --gray: #aaaaaa;
+--black:#080808;
+--dark:#121212;
+--gold:#d4af37;
+--lightgold:#f5df91;
+--white:#ffffff;
+--gray:#b5b5b5;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
 }
 
 body {
-    background: var(--black);
-    color: var(--white);
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.7;
+background:var(--black);
+color:var(--white);
+font-family:Arial,Helvetica,sans-serif;
+line-height:1.7;
 }
 
 a {
-    text-decoration: none;
-    color: inherit;
+text-decoration:none;
+color:inherit;
 }
 
+/* AGE GATE */
+
+.age-gate {
+position:fixed;
+inset:0;
+background:
+linear-gradient(rgba(0,0,0,.94),rgba(0,0,0,.97)),
+url("IMG_0530.jpeg") center/cover;
+z-index:9999;
+display:flex;
+align-items:center;
+justify-content:center;
+padding:20px;
+}
+
+.age-box {
+max-width:480px;
+width:100%;
+text-align:center;
+padding:45px 28px;
+background:#101010;
+border:1px solid var(--gold);
+box-shadow:0 0 35px rgba(212,175,55,.15);
+}
+
+.age-logo {
+font-size:28px;
+color:var(--gold);
+letter-spacing:3px;
+font-weight:bold;
+margin-bottom:20px;
+}
+
+.age-number {
+font-size:75px;
+font-weight:bold;
+color:var(--gold);
+line-height:1.2;
+}
+
+.age-box h2 {
+font-size:23px;
+margin:15px 0;
+}
+
+.age-box p {
+color:var(--gray);
+font-size:14px;
+margin-bottom:25px;
+}
+
+.age-button {
+display:block;
+width:100%;
+padding:14px;
+margin-top:12px;
+background:var(--gold);
+border:1px solid var(--gold);
+color:#000;
+font-weight:bold;
+font-size:14px;
+cursor:pointer;
+}
+
+.age-button:hover {
+background:transparent;
+color:var(--gold);
+}
+
+.age-exit {
+background:transparent;
+color:var(--gold);
+}
+
+.hidden {
+display:none!important;
+}
+
+/* HEADER */
+
 header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background: rgba(8,8,8,0.96);
-    border-bottom: 1px solid rgba(212,175,55,0.3);
+position:sticky;
+top:0;
+z-index:1000;
+background:rgba(8,8,8,.97);
+border-bottom:1px solid rgba(212,175,55,.35);
 }
 
 .topbar {
-    text-align: center;
-    padding: 9px;
-    font-size: 13px;
-    background: #151515;
-    color: var(--light-gold);
+text-align:center;
+padding:8px;
+background:#151515;
+font-size:13px;
+color:var(--lightgold);
 }
 
 .topbar a {
-    color: var(--light-gold);
+color:var(--lightgold);
 }
 
 .navbar {
-    max-width: 1200px;
-    margin: auto;
-    padding: 18px 5%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+max-width:1200px;
+margin:auto;
+padding:17px 5%;
+display:flex;
+justify-content:space-between;
+align-items:center;
 }
 
 .logo {
-    color: var(--gold);
-    font-size: 22px;
-    font-weight: bold;
-    letter-spacing: 2px;
+font-size:20px;
+font-weight:bold;
+letter-spacing:2px;
+color:var(--gold);
 }
 
 .nav-links {
-    display: flex;
-    gap: 27px;
-    list-style: none;
+display:flex;
+list-style:none;
+gap:25px;
 }
 
 .nav-links a {
-    font-size: 13px;
-    letter-spacing: 1px;
-    transition: 0.3s;
+font-size:12px;
+letter-spacing:1px;
+transition:.3s;
 }
 
 .nav-links a:hover {
-    color: var(--gold);
+color:var(--gold);
 }
 
 .menu-btn {
-    display: none;
-    color: var(--gold);
-    font-size: 27px;
-    background: none;
-    border: none;
-    cursor: pointer;
+display:none;
+background:none;
+border:none;
+color:var(--gold);
+font-size:27px;
+cursor:pointer;
 }
 
+/* HERO */
+
 .hero {
-    min-height: 650px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 100px 20px;
-    background:
-    linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.85)),
-    url("IMG_0530.jpeg") center 35% / cover no-repeat;
+min-height:680px;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:100px 20px;
+
+background:
+linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.88)),
+url("IMG_0530.jpeg") center 35%/cover no-repeat;
 }
 
 .hero-content {
-    max-width: 800px;
+max-width:850px;
 }
 
 .hero h1 {
-    font-size: clamp(38px, 7vw, 76px);
-    color: var(--gold);
-    letter-spacing: 4px;
-    line-height: 1.2;
+font-size:clamp(38px,7vw,75px);
+color:var(--gold);
+letter-spacing:3px;
+line-height:1.2;
 }
 
 .hero p {
-    color: #eeeeee;
-    font-size: 17px;
-    margin: 22px 0 30px;
+font-size:17px;
+color:#eee;
+margin:25px 0;
 }
 
 .gold-line {
-    width: 85px;
-    height: 3px;
-    background: var(--gold);
-    margin: 22px auto;
+width:85px;
+height:3px;
+background:var(--gold);
+margin:22px auto;
 }
 
 .btn {
-    display: inline-block;
-    padding: 13px 27px;
-    margin: 7px;
-    background: var(--gold);
-    color: #080808;
-    font-weight: bold;
-    border: 1px solid var(--gold);
-    transition: 0.3s;
+display:inline-block;
+padding:13px 27px;
+margin:7px;
+background:var(--gold);
+color:#000;
+font-weight:bold;
+border:1px solid var(--gold);
+transition:.3s;
 }
 
 .btn:hover {
-    background: transparent;
-    color: var(--gold);
+background:transparent;
+color:var(--gold);
 }
 
-.btn-outline {
-    background: transparent;
-    color: var(--gold);
+.outline {
+background:transparent;
+color:var(--gold);
 }
+
+/* GENERAL SECTIONS */
 
 section {
-    padding: 90px 7%;
+padding:85px 7%;
 }
 
 .section-title {
-    text-align: center;
-    margin-bottom: 45px;
+text-align:center;
+margin-bottom:45px;
 }
 
 .section-title h2 {
-    color: var(--gold);
-    font-size: 34px;
-    letter-spacing: 2px;
+color:var(--gold);
+font-size:34px;
+letter-spacing:2px;
 }
 
 .section-title p {
-    color: var(--gray);
-    margin-top: 10px;
+color:var(--gray);
+margin-top:10px;
 }
+
+/* ABOUT */
 
 .about-content {
-    max-width: 850px;
-    margin: auto;
-    text-align: center;
-    color: #cccccc;
-    font-size: 17px;
+max-width:850px;
+margin:auto;
+text-align:center;
+color:#ccc;
+font-size:17px;
 }
 
+/* GALLERY */
+
 .gallery {
-    background: #101010;
+background:#101010;
 }
 
 .photo-grid {
-    max-width: 1150px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 18px;
+max-width:1150px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:18px;
 }
 
 .photo {
-    overflow: hidden;
-    border: 1px solid rgba(212,175,55,0.35);
-    background: #171717;
-    cursor: pointer;
+overflow:hidden;
+background:#171717;
+border:1px solid rgba(212,175,55,.4);
+cursor:pointer;
 }
 
 .photo img {
-    display: block;
-    width: 100%;
-    height: 350px;
-    object-fit: cover;
-    transition: transform 0.5s;
+width:100%;
+height:350px;
+display:block;
+object-fit:cover;
+transition:.5s;
 }
 
 .photo:hover img {
-    transform: scale(1.05);
+transform:scale(1.05);
 }
 
 .photo-caption {
-    padding: 12px;
-    text-align: center;
-    color: var(--gold);
-    font-size: 13px;
-    letter-spacing: 1px;
+text-align:center;
+padding:12px;
+color:var(--gold);
+font-size:12px;
+letter-spacing:1px;
 }
 
+/* LIGHTBOX */
+
 .lightbox {
-    display: none;
-    position: fixed;
-    z-index: 3000;
-    inset: 0;
-    background: rgba(0,0,0,0.96);
-    align-items: center;
-    justify-content: center;
-    padding: 25px;
+position:fixed;
+inset:0;
+background:rgba(0,0,0,.97);
+z-index:5000;
+display:none;
+align-items:center;
+justify-content:center;
+padding:20px;
 }
 
 .lightbox.active {
-    display: flex;
+display:flex;
 }
 
 .lightbox img {
-    max-width: 95%;
-    max-height: 85vh;
-    object-fit: contain;
+max-width:95%;
+max-height:85vh;
+object-fit:contain;
 }
 
-.close-lightbox {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    font-size: 40px;
-    color: var(--gold);
-    cursor: pointer;
+.close {
+position:absolute;
+top:15px;
+right:25px;
+font-size:42px;
+color:var(--gold);
+cursor:pointer;
 }
+
+/* CONTACT */
 
 .contact {
-    background: #101010;
-    text-align: center;
+background:#101010;
+text-align:center;
 }
 
 .contact-box {
-    max-width: 700px;
-    margin: auto;
-    padding: 40px 20px;
-    border: 1px solid rgba(212,175,55,0.35);
+max-width:700px;
+margin:auto;
+padding:40px 20px;
+border:1px solid rgba(212,175,55,.4);
 }
 
 .contact-box h3 {
-    color: var(--gold);
-    font-size: 25px;
-    margin-bottom: 15px;
+color:var(--gold);
+font-size:26px;
+margin-bottom:15px;
 }
 
-.email-link {
-    color: var(--light-gold);
-    font-size: 19px;
-    display: inline-block;
-    margin: 15px 0;
-    overflow-wrap: anywhere;
+.contact-box p {
+color:#ccc;
+}
+
+.email {
+display:inline-block;
+color:var(--lightgold);
+font-size:19px;
+margin:20px 0;
+overflow-wrap:anywhere;
 }
 
 .social-links {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
-    margin-top: 25px;
+margin-top:25px;
 }
 
 .social-links a {
-    padding: 11px 23px;
-    border: 1px solid var(--gold);
-    color: var(--gold);
-    transition: 0.3s;
+display:inline-block;
+padding:12px 25px;
+border:1px solid var(--gold);
+color:var(--gold);
+transition:.3s;
 }
 
 .social-links a:hover {
-    background: var(--gold);
-    color: #000;
+background:var(--gold);
+color:#000;
 }
 
+/* FOOTER */
+
 footer {
-    padding: 35px 15px;
-    background: #050505;
-    text-align: center;
-    border-top: 1px solid rgba(212,175,55,0.3);
+background:#050505;
+padding:35px 15px;
+text-align:center;
+border-top:1px solid rgba(212,175,55,.3);
 }
 
 footer h3 {
-    color: var(--gold);
-    letter-spacing: 2px;
+color:var(--gold);
+letter-spacing:2px;
 }
 
 footer p {
-    color: var(--gray);
-    font-size: 13px;
-    margin-top: 10px;
+color:var(--gray);
+font-size:13px;
+margin-top:10px;
 }
 
-footer a {
-    color: var(--light-gold);
+/* MOBILE */
+
+@media(max-width:768px) {
+
+.menu-btn {
+display:block;
 }
 
-@media(max-width: 768px) {
-
-    .menu-btn {
-        display: block;
-    }
-
-    .nav-links {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background: #090909;
-        flex-direction: column;
-        text-align: center;
-        padding: 20px;
-        gap: 20px;
-        border-bottom: 1px solid var(--gold);
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-
-    .hero {
-        min-height: 570px;
-    }
-
-    .photo-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
-    }
-
-    .photo img {
-        height: 250px;
-    }
-
-    section {
-        padding: 65px 5%;
-    }
+.nav-links {
+display:none;
+position:absolute;
+top:100%;
+left:0;
+width:100%;
+background:#090909;
+flex-direction:column;
+text-align:center;
+padding:25px;
+gap:20px;
+border-bottom:1px solid var(--gold);
 }
 
-@media(max-width: 430px) {
-    .photo-grid {
-        grid-template-columns: 1fr;
-    }
+.nav-links.active {
+display:flex;
+}
 
-    .photo img {
-        height: 380px;
-    }
+.hero {
+min-height:560px;
+}
 
-    .logo {
-        font-size: 17px;
-    }
+.photo-grid {
+grid-template-columns:repeat(2,1fr);
+gap:10px;
+}
+
+.photo img {
+height:250px;
+}
+
+section {
+padding:65px 5%;
+}
+
+}
+
+@media(max-width:430px) {
+
+.photo-grid {
+grid-template-columns:1fr;
+}
+
+.photo img {
+height:380px;
+}
+
+.logo {
+font-size:16px;
+}
+
 }
 
 </style>
@@ -384,32 +482,71 @@ footer a {
 
 <body>
 
+<!-- 18+ AGE CONFIRMATION -->
+
+<div class="age-gate" id="ageGate">
+
+<div class="age-box">
+
+<div class="age-logo">
+JENNY AWESOME
+</div>
+
+<div class="age-number">18+</div>
+
+<h2>AGE RESTRICTED ACCESS</h2>
+
+<div class="gold-line"></div>
+
+<p>
+This website is intended only for adults aged
+18 years and older.
+
+Please confirm that you are at least 18 years old
+before entering.
+</p>
+
+<button class="age-button" onclick="enterSite()">
+I AM 18 OR OLDER — ENTER
+</button>
+
+<button class="age-button age-exit" onclick="leaveSite()">
+I AM UNDER 18 — EXIT
+</button>
+
+</div>
+</div>
+
+<!-- HEADER -->
+
 <header>
 
 <div class="topbar">
-    Contact Jenny:
-    <a href="mailto:jennyswrestler@gmail.com">
-        jennyswrestler@gmail.com
-    </a>
+CONTACT:
+<a href="mailto:jennyswrestler@gmail.com">
+jennyswrestler@gmail.com
+</a>
 </div>
 
 <nav class="navbar">
 
-    <a href="#home" class="logo">
-        JENNY AWESOME
-    </a>
+<a href="#home" class="logo">
+JENNY AWESOME
+</a>
 
-    <button class="menu-btn" id="menuBtn"
-    aria-label="Open navigation" aria-expanded="false">
-        ☰
-    </button>
+<button class="menu-btn" id="menuBtn"
+aria-label="Open menu" aria-expanded="false">
+☰
+</button>
 
-    <ul class="nav-links" id="navLinks">
-        <li><a href="#home">HOME</a></li>
-        <li><a href="#photos">PHOTOS</a></li>
-        <li><a href="#about">ABOUT</a></li>
-        <li><a href="#contact">CONTACT</a></li>
-    </ul>
+<ul class="nav-links" id="navLinks">
+
+<li><a href="#home">HOME</a></li>
+<li><a href="#photos">PHOTOS</a></li>
+<li><a href="#about">ABOUT</a></li>
+<li><a href="#contact">CONTACT</a></li>
+
+</ul>
 
 </nav>
 </header>
@@ -420,21 +557,23 @@ footer a {
 
 <div class="hero-content">
 
-    <h1>JENNY AWESOME SESSIONS</h1>
+<h1>JENNY AWESOME SESSIONS</h1>
 
-    <div class="gold-line"></div>
+<div class="gold-line"></div>
 
-    <p>
-        Welcome to the official Jenny Awesome Sessions website.
-        Discover the photography, explore the profile and get
-        in touch for private session inquiries.
-    </p>
+<p>
+Welcome to the official Jenny Awesome Sessions website.
+Explore the photography collection and get in touch
+for private session inquiries.
+</p>
 
-    <a href="#photos" class="btn">EXPLORE PHOTOS</a>
+<a href="#photos" class="btn">
+EXPLORE PHOTOS
+</a>
 
-    <a href="#contact" class="btn btn-outline">
-        CONTACT JENNY
-    </a>
+<a href="#contact" class="btn outline">
+CONTACT JENNY
+</a>
 
 </div>
 </section>
@@ -444,26 +583,29 @@ footer a {
 <section id="about">
 
 <div class="section-title">
-    <h2>ABOUT JENNY</h2>
-    <div class="gold-line"></div>
-    <p>Discover Jenny Awesome Sessions</p>
+
+<h2>ABOUT JENNY</h2>
+
+<div class="gold-line"></div>
+
+<p>Discover Jenny Awesome Sessions.</p>
+
 </div>
 
 <div class="about-content">
 
-    <p>
-        Welcome to Jenny Awesome Sessions, an official online
-        destination for wrestling photography and private
-        session inquiries.
-    </p>
+<p>
+Welcome to Jenny Awesome Sessions, an online destination
+for wrestling photography, profile information and
+private session inquiries.
+</p>
 
-    <br>
+<br>
 
-    <p>
-        Explore the photography gallery, discover the profile
-        and connect directly for inquiries and further
-        information.
-    </p>
+<p>
+Explore the photography collection and contact Jenny
+directly for inquiries and further information.
+</p>
 
 </div>
 
@@ -475,57 +617,53 @@ footer a {
 
 <div class="section-title">
 
-    <h2>PHOTO GALLERY</h2>
+<h2>PHOTOGRAPHY COLLECTION</h2>
 
-    <div class="gold-line"></div>
+<div class="gold-line"></div>
 
-    <p>Explore the Jenny Awesome Sessions collection.</p>
+<p>Explore the collection.</p>
 
 </div>
 
 <div class="photo-grid">
 
-    <div class="photo" onclick="openPhoto(this)">
-        <img src="IMG_0530.jpeg"
-        alt="Jenny Awesome Sessions photograph">
-        <div class="photo-caption">PHOTO COLLECTION</div>
-    </div>
+<div class="photo" onclick="openPhoto(this)">
+<img src="IMG_0530.jpeg" alt="Jenny photography">
+<div class="photo-caption">JENNY COLLECTION</div>
+</div>
 
-    <div class="photo" onclick="openPhoto(this)">
-        <img src="IMG_0532.jpeg"
-        alt="Jenny Awesome Sessions photograph">
-        <div class="photo-caption">PHOTO COLLECTION</div>
-    </div>
+<div class="photo" onclick="openPhoto(this)">
+<img src="IMG_0532.jpeg" alt="Jenny photography">
+<div class="photo-caption">JENNY COLLECTION</div>
+</div>
 
-    <div class="photo" onclick="openPhoto(this)">
-        <img src="IMG_0535.jpeg"
-        alt="Jenny Awesome Sessions photograph">
-        <div class="photo-caption">PHOTO COLLECTION</div>
-    </div>
+<div class="photo" onclick="openPhoto(this)">
+<img src="IMG_0535.jpeg" alt="Jenny photography">
+<div class="photo-caption">JENNY COLLECTION</div>
+</div>
 
-    <div class="photo" onclick="openPhoto(this)">
-        <img src="IMG_0539.jpeg"
-        alt="Jenny Awesome Sessions photograph">
-        <div class="photo-caption">PHOTO COLLECTION</div>
-    </div>
+<div class="photo" onclick="openPhoto(this)">
+<img src="IMG_0539.jpeg" alt="Jenny photography">
+<div class="photo-caption">JENNY COLLECTION</div>
+</div>
 
-    <div class="photo" onclick="openPhoto(this)">
-        <img src="IMG_0541.jpeg"
-        alt="Jenny Awesome Sessions photograph">
-        <div class="photo-caption">PHOTO COLLECTION</div>
-    </div>
+<div class="photo" onclick="openPhoto(this)">
+<img src="IMG_0541.jpeg" alt="Jenny photography">
+<div class="photo-caption">JENNY COLLECTION</div>
+</div>
 
 </div>
+
 </section>
 
-<!-- IMAGE ENLARGEMENT -->
+<!-- IMAGE VIEWER -->
 
 <div class="lightbox" id="lightbox"
 onclick="closePhoto()">
 
-    <span class="close-lightbox">&times;</span>
+<span class="close">&times;</span>
 
-    <img id="lightboxImage" src="" alt="Enlarged photograph">
+<img id="lightboxImage" src="" alt="Enlarged photograph">
 
 </div>
 
@@ -535,51 +673,46 @@ onclick="closePhoto()">
 
 <div class="section-title">
 
-    <h2>GET IN TOUCH</h2>
+<h2>CONTACT JENNY</h2>
 
-    <div class="gold-line"></div>
+<div class="gold-line"></div>
 
-    <p>For inquiries and private session information.</p>
+<p>For inquiries and private session information.</p>
 
 </div>
 
 <div class="contact-box">
 
-    <h3>CONTACT JENNY</h3>
+<h3>GET IN TOUCH</h3>
 
-    <p>
-        For professional inquiries, further information
-        and private session requests, please get in touch.
-    </p>
+<p>
+For professional inquiries and private session requests,
+please contact Jenny directly.
+</p>
 
-    <a class="email-link"
-    href="mailto:jennyswrestler@gmail.com">
-        jennyswrestler@gmail.com
-    </a>
+<a class="email"
+href="mailto:jennyswrestler@gmail.com">
+jennyswrestler@gmail.com
+</a>
 
-    <br>
+<br>
 
-    <a href="mailto:jennyswrestler@gmail.com"
-    class="btn">
-        SEND AN EMAIL
-    </a>
+<a href="mailto:jennyswrestler@gmail.com"
+class="btn">
+SEND AN EMAIL
+</a>
 
-    <div class="social-links">
+<div class="social-links">
 
-        <!-- Replace these two placeholder links with
-             your actual existing social media URLs. -->
+<!-- Replace with the existing Twitter/X profile URL -->
 
-        <a href="PASTE-YOUR-EXISTING-X-URL-HERE"
-        target="_blank" rel="noopener noreferrer">
-            TWITTER / X
-        </a>
+<a href="PASTE-YOUR-EXISTING-X-URL-HERE"
+target="_blank"
+rel="noopener noreferrer">
+TWITTER / X
+</a>
 
-        <a href="PASTE-YOUR-EXISTING-INSTAGRAM-URL-HERE"
-        target="_blank" rel="noopener noreferrer">
-            INSTAGRAM
-        </a>
-
-    </div>
+</div>
 
 </div>
 
@@ -589,75 +722,105 @@ onclick="closePhoto()">
 
 <footer>
 
-    <h3>JENNY AWESOME SESSIONS</h3>
+<h3>JENNY AWESOME SESSIONS</h3>
 
-    <p>
-        Official Website
-    </p>
+<p>Official Website</p>
 
-    <p>
-        <a href="mailto:jennyswrestler@gmail.com">
-            jennyswrestler@gmail.com
-        </a>
-    </p>
+<p>
+<a href="mailto:jennyswrestler@gmail.com">
+jennyswrestler@gmail.com
+</a>
+</p>
 
-    <p>
-        &copy; <span id="year"></span>
-        Jenny Awesome Sessions. All Rights Reserved.
-    </p>
+<p>
+&copy; <span id="year"></span>
+Jenny Awesome Sessions. All Rights Reserved.
+</p>
 
 </footer>
 
 <script>
 
-// MOBILE NAVIGATION
+// AGE CONFIRMATION
 
-const menuBtn = document.getElementById("menuBtn");
-const navLinks = document.getElementById("navLinks");
+function enterSite() {
 
-menuBtn.addEventListener("click", function() {
-    const isOpen = navLinks.classList.toggle("active");
-    menuBtn.setAttribute("aria-expanded", isOpen);
-});
+localStorage.setItem("jennyAgeConfirmed","true");
 
-document.querySelectorAll(".nav-links a").forEach(link => {
-    link.addEventListener("click", function() {
-        navLinks.classList.remove("active");
-        menuBtn.setAttribute("aria-expanded", "false");
-    });
-});
-
-// PHOTO ENLARGEMENT
-
-function openPhoto(element) {
-
-    const image = element.querySelector("img");
-
-    document.getElementById("lightboxImage").src = image.src;
-
-    document.getElementById("lightbox").classList.add("active");
-}
-
-function closePhoto() {
-
-    document.getElementById("lightbox").classList.remove("active");
+document.getElementById("ageGate").classList.add("hidden");
 
 }
 
-// CLOSE PHOTO WITH ESCAPE KEY
+function leaveSite() {
 
-document.addEventListener("keydown", function(event) {
+document.getElementById("ageGate").innerHTML =
+'<div class="age-box"><h2>ACCESS RESTRICTED</h2><p>You cannot enter this website.</p></div>';
 
-    if (event.key === "Escape") {
-        closePhoto();
-    }
+}
+
+if(localStorage.getItem("jennyAgeConfirmed")==="true") {
+
+document.getElementById("ageGate").classList.add("hidden");
+
+}
+
+// MOBILE MENU
+
+const menuBtn=document.getElementById("menuBtn");
+const navLinks=document.getElementById("navLinks");
+
+menuBtn.addEventListener("click",function(){
+
+const opened=navLinks.classList.toggle("active");
+
+menuBtn.setAttribute("aria-expanded",opened);
 
 });
 
-// AUTOMATIC COPYRIGHT YEAR
+document.querySelectorAll(".nav-links a").forEach(link=>{
 
-document.getElementById("year").textContent =
-    new Date().getFullYear();
+link.addEventListener("click",function(){
+
+navLinks.classList.remove("active");
+
+menuBtn.setAttribute("aria-expanded","false");
+
+});
+
+});
+
+// PHOTO VIEWER
+
+function openPhoto(element){
+
+const image=element.querySelector("img");
+
+document.getElementById("lightboxImage").src=image.src;
+
+document.getElementById("lightbox").classList.add("active");
+
+}
+
+function closePhoto(){
+
+document.getElementById("lightbox").classList.remove("active");
+
+}
+
+document.addEventListener("keydown",function(event){
+
+if(event.key==="Escape"){
+
+closePhoto();
+
+}
+
+});
+
+// COPYRIGHT
+
+document.getElementById("year").textContent=
+new Date().getFullYear();
 
 </script>
 
