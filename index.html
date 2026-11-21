@@ -3,332 +3,504 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Jenny Awesome Sessions - Official website, photography and private session enquiries.">
-<title>Jenny Awesome Sessions | Official Website</title>
+
+<title>Jenny Awesome Sessions | Professional Wrestler</title>
+
+<meta name="description" content="Official Jenny Awesome Sessions professional wrestling profile. Discover wrestling experience, specialties, physical statistics, photographs and private session enquiries.">
 
 <style>
 :root {
-  --bg: #080808;
-  --card: #151515;
-  --gold: #d4af37;
-  --lightgold: #f0d77a;
-  --text: #f5f5f5;
-  --muted: #aaa;
+  --black:#080808;
+  --panel:#141414;
+  --gold:#d4af37;
+  --gold-light:#f3dc91;
+  --white:#f5f5f5;
+  --grey:#aaa;
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior:smooth;
 }
 
 body {
-  background: var(--bg);
-  color: var(--text);
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.6;
+  background:var(--black);
+  color:var(--white);
+  font-family:Arial,Helvetica,sans-serif;
+  line-height:1.6;
 }
 
 a {
-  color: inherit;
-  text-decoration: none;
+  text-decoration:none;
+  color:inherit;
 }
 
 header {
-  position: sticky;
-  top: 0;
-  z-index: 20;
-  background: rgba(8,8,8,.96);
-  border-bottom: 1px solid rgba(212,175,55,.25);
-  padding: 17px 6%;
+  position:sticky;
+  top:0;
+  z-index:50;
+  background:rgba(8,8,8,.97);
+  border-bottom:1px solid rgba(212,175,55,.3);
+  padding:16px 5%;
 }
 
 .nav {
-  max-width: 1200px;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
+  max-width:1250px;
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
 }
 
 .logo {
-  color: var(--gold);
-  font-weight: bold;
-  letter-spacing: 2px;
-  font-size: 19px;
+  color:var(--gold);
+  font-size:19px;
+  font-weight:bold;
+  letter-spacing:2px;
 }
 
 nav {
-  display: flex;
-  gap: 23px;
-  flex-wrap: wrap;
+  display:flex;
+  flex-wrap:wrap;
+  gap:17px;
 }
 
 nav a {
-  font-size: 14px;
-  color: #ddd;
+  color:#ddd;
+  font-size:13px;
+  transition:.3s;
 }
 
 nav a:hover {
-  color: var(--gold);
+  color:var(--gold);
 }
 
 .hero {
-  min-height: 570px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 80px 20px;
+  min-height:620px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:70px 20px;
   background:
-    linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.85)),
+    linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.88)),
     url("IMG_0530.jpeg") center 35% / cover no-repeat;
 }
 
 .hero-content {
-  max-width: 750px;
+  max-width:850px;
+}
+
+.eyebrow {
+  color:var(--gold-light);
+  letter-spacing:5px;
+  font-size:13px;
+  margin-bottom:18px;
+  text-transform:uppercase;
 }
 
 .hero h1 {
-  font-size: clamp(38px, 7vw, 65px);
-  color: white;
-  letter-spacing: 2px;
-  margin-bottom: 15px;
+  font-size:clamp(38px,8vw,76px);
+  line-height:1.1;
+  letter-spacing:2px;
+  margin-bottom:20px;
 }
 
 .hero h1 span {
-  color: var(--gold);
+  color:var(--gold);
 }
 
 .hero p {
-  color: #eee;
-  font-size: 17px;
-  margin-bottom: 28px;
+  color:#ddd;
+  font-size:18px;
+  margin-bottom:30px;
 }
 
 .button {
-  display: inline-block;
-  padding: 13px 27px;
-  border: 1px solid var(--gold);
-  color: var(--gold);
-  border-radius: 30px;
-  margin: 6px;
-  transition: .25s;
+  display:inline-block;
+  padding:13px 26px;
+  margin:6px;
+  border:1px solid var(--gold);
+  border-radius:30px;
+  color:var(--gold);
+  font-size:14px;
+  font-weight:bold;
+  transition:.3s;
 }
 
 .button:hover {
-  background: var(--gold);
-  color: #080808;
+  background:var(--gold);
+  color:#080808;
+}
+
+.button.primary {
+  background:var(--gold);
+  color:#080808;
 }
 
 section {
-  padding: 75px 6%;
-  max-width: 1250px;
-  margin: auto;
+  max-width:1250px;
+  margin:auto;
+  padding:85px 6%;
 }
 
-.section-title {
-  text-align: center;
-  color: var(--gold);
-  font-size: 32px;
-  margin-bottom: 35px;
+.section-heading {
+  text-align:center;
+  margin-bottom:40px;
 }
 
-.about {
-  max-width: 800px;
-  margin: auto;
-  text-align: center;
-  color: #ccc;
-  font-size: 17px;
+.section-heading small {
+  color:var(--gold);
+  letter-spacing:4px;
+  text-transform:uppercase;
+}
+
+.section-heading h2 {
+  font-size:34px;
+  margin-top:8px;
+}
+
+.section-heading p {
+  color:var(--grey);
+  max-width:700px;
+  margin:12px auto 0;
+}
+
+.profile-layout {
+  display:grid;
+  grid-template-columns:1fr 1.3fr;
+  gap:35px;
+  align-items:center;
+}
+
+.profile-image img {
+  width:100%;
+  height:430px;
+  object-fit:cover;
+  border-radius:12px;
+  border:1px solid rgba(212,175,55,.4);
+}
+
+.profile-text h3 {
+  font-size:28px;
+  color:var(--gold);
+  margin-bottom:15px;
+}
+
+.profile-text p {
+  color:#ccc;
+  margin-bottom:15px;
+}
+
+.profile-tags {
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:20px;
+}
+
+.profile-tags span {
+  border:1px solid rgba(212,175,55,.4);
+  padding:8px 14px;
+  border-radius:25px;
+  font-size:12px;
+  color:var(--gold-light);
+}
+
+.experience-grid,
+.specialty-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+}
+
+.info-card {
+  background:var(--panel);
+  padding:30px 23px;
+  border:1px solid rgba(212,175,55,.25);
+  border-radius:12px;
+  transition:.3s;
+}
+
+.info-card:hover {
+  border-color:var(--gold);
+  transform:translateY(-4px);
+}
+
+.info-card .number {
+  color:var(--gold);
+  font-size:28px;
+  margin-bottom:12px;
+}
+
+.info-card h3 {
+  color:var(--gold-light);
+  font-size:19px;
+  margin-bottom:12px;
+}
+
+.info-card p {
+  color:#bbb;
+  font-size:14px;
+}
+
+.stats-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:16px;
+}
+
+.stat {
+  text-align:center;
+  background:var(--panel);
+  border:1px solid rgba(212,175,55,.3);
+  border-radius:12px;
+  padding:30px 15px;
+}
+
+.stat h3 {
+  color:var(--grey);
+  font-size:13px;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  margin-bottom:12px;
+}
+
+.stat strong {
+  color:var(--gold);
+  font-size:27px;
+}
+
+.stat small {
+  display:block;
+  color:var(--grey);
+  margin-top:5px;
 }
 
 .gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 18px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:18px;
 }
 
 .gallery img {
-  width: 100%;
-  height: 330px;
-  object-fit: cover;
-  border-radius: 12px;
-  border: 1px solid rgba(212,175,55,.3);
-  cursor: pointer;
-  transition: transform .25s, border-color .25s;
+  width:100%;
+  height:330px;
+  object-fit:cover;
+  border-radius:10px;
+  border:1px solid rgba(212,175,55,.3);
+  cursor:pointer;
+  transition:.3s;
 }
 
 .gallery img:hover {
-  transform: scale(1.02);
-  border-color: var(--gold);
+  transform:scale(1.025);
+  border-color:var(--gold);
+}
+
+.private-section {
+  background:
+    linear-gradient(rgba(0,0,0,.82),rgba(0,0,0,.9)),
+    url("IMG_0532.jpeg") center / cover no-repeat;
+  border-top:1px solid rgba(212,175,55,.3);
+  border-bottom:1px solid rgba(212,175,55,.3);
+  max-width:none;
+}
+
+.private-inner {
+  max-width:850px;
+  margin:auto;
+  text-align:center;
+}
+
+.private-inner h2 {
+  color:var(--gold);
+  font-size:36px;
+  margin-bottom:18px;
+}
+
+.private-inner p {
+  color:#ddd;
+  margin-bottom:25px;
 }
 
 .contact-box {
-  max-width: 650px;
-  margin: auto;
-  background: var(--card);
-  border: 1px solid rgba(212,175,55,.35);
-  padding: 35px 25px;
-  border-radius: 15px;
-  text-align: center;
+  max-width:700px;
+  margin:auto;
+  text-align:center;
+  background:var(--panel);
+  border:1px solid rgba(212,175,55,.35);
+  padding:40px 25px;
+  border-radius:14px;
 }
 
 .contact-box p {
-  color: #ccc;
-  margin-bottom: 18px;
+  color:#bbb;
+  margin-bottom:20px;
 }
 
-.contact-link {
-  color: var(--lightgold);
-  font-size: 17px;
-  overflow-wrap: anywhere;
+.email {
+  color:var(--gold-light);
+  font-size:18px;
+  overflow-wrap:anywhere;
 }
 
-.social-link {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 12px 25px;
-  border: 1px solid var(--gold);
-  border-radius: 30px;
-  color: var(--gold);
+.social-button {
+  display:inline-block;
+  border:1px solid var(--gold);
+  color:var(--gold);
+  border-radius:30px;
+  padding:12px 25px;
+  margin-top:22px;
 }
 
-.social-link:hover {
-  background: var(--gold);
-  color: #080808;
+.social-button:hover {
+  background:var(--gold);
+  color:#080808;
 }
 
 footer {
-  border-top: 1px solid rgba(212,175,55,.25);
-  text-align: center;
-  padding: 30px 15px;
-  color: var(--muted);
-  font-size: 14px;
+  text-align:center;
+  padding:35px 15px;
+  border-top:1px solid rgba(212,175,55,.25);
+  color:var(--grey);
+  font-size:13px;
 }
 
 footer a {
-  color: var(--gold);
+  color:var(--gold);
 }
 
-/* Photo lightbox */
+/* PHOTO LIGHTBOX */
+
 .lightbox {
-  display: none;
-  position: fixed;
-  inset: 0;
-  z-index: 100;
-  background: rgba(0,0,0,.95);
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
+  display:none;
+  position:fixed;
+  inset:0;
+  z-index:100;
+  background:rgba(0,0,0,.96);
+  align-items:center;
+  justify-content:center;
+  padding:20px;
 }
 
 .lightbox img {
-  max-width: 95%;
-  max-height: 90vh;
-  object-fit: contain;
+  max-width:95%;
+  max-height:90vh;
+  object-fit:contain;
 }
 
 .lightbox span {
-  position: absolute;
-  top: 20px;
-  right: 25px;
-  font-size: 40px;
-  color: white;
-  cursor: pointer;
+  position:absolute;
+  top:15px;
+  right:25px;
+  color:white;
+  font-size:42px;
+  cursor:pointer;
 }
 
-/* Age-entry screen */
+/* AGE ENTRY */
+
 .age-gate {
-  position: fixed;
-  inset: 0;
-  z-index: 200;
+  position:fixed;
+  inset:0;
+  z-index:200;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
   background:
-    linear-gradient(rgba(0,0,0,.82), rgba(0,0,0,.94)),
+    linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.95)),
     url("IMG_0530.jpeg") center / cover no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
 }
 
 .age-box {
-  max-width: 480px;
-  width: 100%;
-  background: rgba(15,15,15,.97);
-  border: 1px solid var(--gold);
-  border-radius: 16px;
-  padding: 40px 25px;
-  text-align: center;
+  max-width:480px;
+  width:100%;
+  text-align:center;
+  padding:40px 25px;
+  background:#111;
+  border:1px solid var(--gold);
+  border-radius:15px;
 }
 
 .age-box h2 {
-  color: var(--gold);
-  font-size: 30px;
-  margin-bottom: 15px;
+  color:var(--gold);
+  margin-bottom:15px;
 }
 
 .age-box p {
-  color: #ddd;
-  margin-bottom: 25px;
+  color:#ccc;
+  margin-bottom:25px;
 }
 
 .age-button {
-  display: block;
-  width: 100%;
-  padding: 15px;
-  margin-top: 12px;
-  border-radius: 30px;
-  border: 1px solid var(--gold);
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
+  width:100%;
+  padding:15px;
+  margin-top:12px;
+  border-radius:30px;
+  cursor:pointer;
+  font-weight:bold;
+  font-size:15px;
 }
 
 .enter-button {
-  background: var(--gold);
-  color: #080808;
+  background:var(--gold);
+  border:1px solid var(--gold);
+  color:#080808;
 }
 
 .exit-button {
-  background: transparent;
-  color: white;
+  background:transparent;
+  border:1px solid var(--gold);
+  color:white;
 }
 
 #accessDenied {
-  display: none;
-  color: var(--lightgold);
-  margin-top: 20px;
+  display:none;
+  color:var(--gold-light);
+  margin-top:20px;
 }
 
-@media(max-width: 650px) {
-  header {
-    padding: 15px 5%;
-  }
+@media(max-width:750px) {
 
   .nav {
-    flex-direction: column;
+    flex-direction:column;
   }
 
   nav {
-    justify-content: center;
-    gap: 15px;
+    justify-content:center;
+    gap:12px;
   }
 
   .hero {
-    min-height: 480px;
+    min-height:500px;
+  }
+
+  .profile-layout {
+    grid-template-columns:1fr;
+  }
+
+  .profile-image img {
+    height:350px;
   }
 
   section {
-    padding: 55px 5%;
+    padding:60px 5%;
   }
 
   .gallery img {
-    height: 280px;
+    height:280px;
+  }
+
+  .section-heading h2 {
+    font-size:28px;
   }
 }
 </style>
@@ -336,10 +508,14 @@ footer a {
 
 <body>
 
-<!-- 18+ AGE ENTRY -->
+<!-- 18+ ENTRY SCREEN -->
+
 <div class="age-gate" id="ageGate">
+
   <div class="age-box">
+
     <h2>JENNY AWESOME SESSIONS</h2>
+
     <p>
       This website is intended for adults aged 18 and over.
       Please confirm that you are at least 18 years old to enter.
@@ -354,97 +530,390 @@ footer a {
     </button>
 
     <div id="accessDenied">
-      ACCESS RESTRICTED — You cannot enter this website.
+      ACCESS RESTRICTED
     </div>
+
   </div>
 </div>
 
+<!-- NAVIGATION -->
+
 <header>
+
   <div class="nav">
-    <a href="#home" class="logo">JENNY AWESOME SESSIONS</a>
+
+    <a href="#home" class="logo">
+      JENNY AWESOME SESSIONS
+    </a>
 
     <nav>
       <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#photos">Photos</a>
+      <a href="#profile">Profile</a>
+      <a href="#experience">Experience</a>
+      <a href="#specialties">Specialties</a>
+      <a href="#statistics">Statistics</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#private">Private Sessions</a>
       <a href="#contact">Contact</a>
     </nav>
+
   </div>
+
 </header>
 
 <main>
 
+<!-- HERO -->
+
 <section class="hero" id="home">
+
   <div class="hero-content">
-    <h1>JENNY <span>AWESOME</span> SESSIONS</h1>
-    <p>Welcome to the official Jenny Awesome Sessions website.</p>
-    <a href="#photos" class="button">VIEW PHOTOS</a>
-    <a href="#contact" class="button">CONTACT</a>
-  </div>
-</section>
 
-<section id="about">
-  <h2 class="section-title">ABOUT</h2>
-  <div class="about">
+    <div class="eyebrow">
+      Official Wrestler Profile
+    </div>
+
+    <h1>
+      JENNY <span>AWESOME</span>
+    </h1>
+
     <p>
-      Welcome to Jenny Awesome Sessions. Explore the photo gallery
-      and use the contact details below for private session enquiries.
-      Thank you for visiting the official website.
+      Professional Wrestling • Experience • Performance
     </p>
+
+    <a href="#profile" class="button primary">
+      EXPLORE PROFILE
+    </a>
+
+    <a href="#private" class="button">
+      PRIVATE SESSION INQUIRY
+    </a>
+
   </div>
+
 </section>
 
-<section id="photos">
-  <h2 class="section-title">PHOTO GALLERY</h2>
+<!-- PROFILE -->
+
+<section id="profile">
+
+  <div class="section-heading">
+
+    <small>Wrestler Profile</small>
+
+    <h2>ABOUT JENNY</h2>
+
+    <p>
+      Discover the profile, experience and professional wrestling interests.
+    </p>
+
+  </div>
+
+  <div class="profile-layout">
+
+    <div class="profile-image">
+      <img src="IMG_0530.jpeg" alt="Jenny Awesome Sessions profile photograph">
+    </div>
+
+    <div class="profile-text">
+
+      <h3>Jenny Awesome</h3>
+
+      <p>
+        Welcome to the official Jenny Awesome Sessions profile.
+        Explore the wrestling profile, experience, specialties,
+        physical statistics and photography collection.
+      </p>
+
+      <p>
+        This website provides a central place to learn more about
+        Jenny and make enquiries about private sessions.
+      </p>
+
+      <div class="profile-tags">
+        <span>WRESTLER PROFILE</span>
+        <span>ATHLETIC PHYSIQUE</span>
+        <span>PRIVATE SESSIONS</span>
+        <span>PHOTO GALLERY</span>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- EXPERIENCE -->
+
+<section id="experience">
+
+  <div class="section-heading">
+
+    <small>Professional Background</small>
+
+    <h2>WRESTLING EXPERIENCE</h2>
+
+    <p>
+      Learn about wrestling experience and professional interests.
+    </p>
+
+  </div>
+
+  <div class="experience-grid">
+
+    <div class="info-card">
+      <div class="number">01</div>
+      <h3>Professional Experience</h3>
+      <p>
+        Profile experience listed as 5–15+ years.
+      </p>
+    </div>
+
+    <div class="info-card">
+      <div class="number">02</div>
+      <h3>Wrestling Profile</h3>
+      <p>
+        Explore the wrestler profile and its professional presentation.
+      </p>
+    </div>
+
+    <div class="info-card">
+      <div class="number">03</div>
+      <h3>Performance Interests</h3>
+      <p>
+        Discover the profile's wrestling and session-related interests.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- SPECIALTIES -->
+
+<section id="specialties">
+
+  <div class="section-heading">
+
+    <small>Professional Focus</small>
+
+    <h2>WRESTLING SPECIALTIES</h2>
+
+    <p>
+      Explore the specialties and areas of interest featured in this profile.
+    </p>
+
+  </div>
+
+  <div class="specialty-grid">
+
+    <div class="info-card">
+      <div class="number">✦</div>
+      <h3>Professional Wrestling</h3>
+      <p>
+        Wrestling-focused profile and professional presentation.
+      </p>
+    </div>
+
+    <div class="info-card">
+      <div class="number">✦</div>
+      <h3>Wrestling Photography</h3>
+      <p>
+        A dedicated collection of wrestling-related profile photographs.
+      </p>
+    </div>
+
+    <div class="info-card">
+      <div class="number">✦</div>
+      <h3>Private Sessions</h3>
+      <p>
+        Private session enquiries and individual arrangements.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- STATISTICS -->
+
+<section id="statistics">
+
+  <div class="section-heading">
+
+    <small>Profile Information</small>
+
+    <h2>PHYSICAL STATISTICS</h2>
+
+    <p>
+      View the physical statistics and experience information.
+    </p>
+
+  </div>
+
+  <div class="stats-grid">
+
+    <div class="stat">
+      <h3>Height</h3>
+      <strong>5'9"</strong>
+      <small>175 cm</small>
+    </div>
+
+    <div class="stat">
+      <h3>Weight</h3>
+      <strong>140 lbs</strong>
+      <small>Profile weight</small>
+    </div>
+
+    <div class="stat">
+      <h3>Physique</h3>
+      <strong>Athletic</strong>
+      <small>Body type</small>
+    </div>
+
+    <div class="stat">
+      <h3>Experience</h3>
+      <strong>5–15+</strong>
+      <small>Years</small>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- PHOTO GALLERY -->
+
+<section id="gallery">
+
+  <div class="section-heading">
+
+    <small>Official Collection</small>
+
+    <h2>PHOTO GALLERY</h2>
+
+    <p>
+      Explore the Jenny Awesome Sessions photograph collection.
+      Select any photograph to view it larger.
+    </p>
+
+  </div>
 
   <div class="gallery">
-    <img src="IMG_0530.jpeg" alt="Jenny photo 1" onclick="openPhoto(this)">
-    <img src="IMG_0532.jpeg" alt="Jenny photo 2" onclick="openPhoto(this)">
-    <img src="IMG_0535.jpeg" alt="Jenny photo 3" onclick="openPhoto(this)">
-    <img src="IMG_0539.jpeg" alt="Jenny photo 4" onclick="openPhoto(this)">
-    <img src="IMG_0541.jpeg" alt="Jenny photo 5" onclick="openPhoto(this)">
+
+    <img src="IMG_0530.jpeg" alt="Jenny photograph 1" onclick="openPhoto(this)">
+
+    <img src="IMG_0532.jpeg" alt="Jenny photograph 2" onclick="openPhoto(this)">
+
+    <img src="IMG_0535.jpeg" alt="Jenny photograph 3" onclick="openPhoto(this)">
+
+    <img src="IMG_0539.jpeg" alt="Jenny photograph 4" onclick="openPhoto(this)">
+
+    <img src="IMG_0541.jpeg" alt="Jenny photograph 5" onclick="openPhoto(this)">
+
   </div>
+
 </section>
 
+<!-- PRIVATE SESSION -->
+
+<section class="private-section" id="private">
+
+  <div class="private-inner">
+
+    <div class="eyebrow">
+      Private Bookings
+    </div>
+
+    <h2>PRIVATE SESSIONS</h2>
+
+    <p>
+      Interested in arranging a private session?
+      Send an enquiry to discuss your request, session details,
+      availability and arrangements.
+    </p>
+
+    <a
+      class="button primary"
+      href="mailto:jennyswrestler@gmail.com?subject=Private%20Session%20Inquiry">
+      MAKE A PRIVATE SESSION INQUIRY
+    </a>
+
+  </div>
+
+</section>
+
+<!-- CONTACT -->
+
 <section id="contact">
-  <h2 class="section-title">CONTACT</h2>
+
+  <div class="section-heading">
+
+    <small>Get In Touch</small>
+
+    <h2>CONTACT JENNY</h2>
+
+    <p>
+      For general enquiries and private session information,
+      use the contact details below.
+    </p>
+
+  </div>
 
   <div class="contact-box">
-    <p>For enquiries and private session information, contact Jenny directly:</p>
 
-    <a class="contact-link" href="mailto:jennyswrestler@gmail.com">
+    <p>Email enquiries:</p>
+
+    <a class="email" href="mailto:jennyswrestler@gmail.com">
       jennyswrestler@gmail.com
     </a>
 
     <br>
 
-    <a class="social-link"
-       href="https://x.com/jennys_session"
-       target="_blank"
-       rel="noopener noreferrer">
-      FOLLOW ON X / TWITTER
+    <a
+      class="social-button"
+      href="https://x.com/jennys_session"
+      target="_blank"
+      rel="noopener noreferrer">
+      FOLLOW JENNY ON X / TWITTER
     </a>
+
   </div>
+
 </section>
 
 </main>
 
+<!-- FOOTER -->
+
 <footer>
-  <p>© <span id="year"></span> Jenny Awesome Sessions. All rights reserved.</p>
+
   <p>
+    © <span id="year"></span> Jenny Awesome Sessions.
+    All rights reserved.
+  </p>
+
+  <p style="margin-top:10px;">
     <a href="https://x.com/jennys_session"
        target="_blank"
-       rel="noopener noreferrer">X / Twitter</a>
+       rel="noopener noreferrer">
+       Official X / Twitter Profile
+    </a>
   </p>
+
 </footer>
 
 <!-- PHOTO VIEWER -->
+
 <div class="lightbox" id="lightbox" onclick="closePhoto()">
+
   <span>&times;</span>
-  <img id="lightboxImage" src="" alt="Enlarged gallery photograph">
+
+  <img id="lightboxImage" src="" alt="Expanded photograph">
+
 </div>
 
 <script>
+
 function enterSite() {
   localStorage.setItem("jennyAgeConfirmed", "yes");
   document.getElementById("ageGate").style.display = "none";
@@ -467,7 +936,9 @@ function closePhoto() {
   document.getElementById("lightbox").style.display = "none";
 }
 
-document.getElementById("year").textContent = new Date().getFullYear();
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+
 </script>
 
 </body>
